@@ -7,8 +7,11 @@ class PolyTreeNode
   end
 
   def parent=(node)
+    @parent.children.delete(self) if @parent
     @parent = node
-    node.children << self
+    if node
+      node.children << self unless node.children.include?(self)
+    end
   end
 
 end
