@@ -48,7 +48,3 @@ class KnightPathFinder
     path.map(&:value)
   end
 end
-
-k = KnightPathFinder.new([0,0])
-p k.find_path([7, 6])
-p k.find_path([6, 2])
